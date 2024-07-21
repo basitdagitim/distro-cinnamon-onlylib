@@ -83,7 +83,8 @@ done
 #glib-> libffi 
 #gtk3 ->glib gdk_pixbuf harfbuzz fontconfig
 #update-mime-database-> gcc 
-for paket in libffi fribidi freetype atkmm libepoxy glib fontconfig libgcc gdk-pixbuf harfbuzz shadow openbox gtk3 libjpeg-turbo dbus polkit elogind shared-mime-info
+#openbox silindi
+for paket in libffi fribidi freetype atkmm libepoxy glib fontconfig libgcc gdk-pixbuf harfbuzz shadow gtk3 libjpeg-turbo dbus polkit elogind shared-mime-info
 do
 chroot $rootfs /bin/bps -i $paket;
 done
@@ -143,7 +144,7 @@ chroot $rootfs /bin/bps -i fw-generic
 chroot $rootfs /bin/bps -i fw-ath
 chroot $rootfs /bin/bps -i fw-iwl
 chroot $rootfs depmod -a
-chroot $rootfs /bin/bps -i bluez
+
 chroot $rootfs /bin/bps -i wireless_tools
 chroot $rootfs /bin/bps -i wpa_supplicant
 # set permissions
