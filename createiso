@@ -88,7 +88,7 @@ for paket in libffi fribidi freetype atkmm libepoxy glib fontconfig libgcc gdk-p
 do
 chroot $rootfs /bin/bps -i $paket;
 done
- 
+
 chroot $rootfs /bin/bps -i x11-base-base
 chroot $rootfs /bin/bps -i x11-driver-base
 chroot $rootfs /bin/bps -i x11-libs-base
