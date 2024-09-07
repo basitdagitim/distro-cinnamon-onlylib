@@ -15,7 +15,7 @@ DISK=""
 result=""
 dsk=""
 dskx=""
-
+ 
 emptyfieldcheck()
 {
 if [ -z "${installdisk}" ];then
